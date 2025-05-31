@@ -25,7 +25,7 @@ target_link_libraries(${PROJECT_NAME}
 					hardware_pwm
 				    )
 # Generate PIO header
-pico_generate_pio_header(${PROJECT_NAME} ${CMAKE_CURRENT_LIST_DIR}/src/ws2818b.pio)
+pico_generate_pio_header(${PROJECT_NAME} ${CMAKE_CURRENT_LIST_DIR}/include/ws2818b.pio)
 
 pico_enable_stdio_usb(${PROJECT_NAME} 1)
 pico_enable_stdio_uart(${PROJECT_NAME} 0)    
