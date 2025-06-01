@@ -1,17 +1,46 @@
 
 # Projetos de Sistemas Embarcados - EmbarcaTech 2025
+## Sintetizador de Áudio na BitDogLab
 
-Autor: **Insira Seu Nome**
+Autor: Vagner Sanches Vasconcelos
 
 Curso: Residência Tecnológica em Sistemas Embarcados
 
 Instituição: EmbarcaTech - HBr
 
-Campinas, ___ de 2025
+Campinas, 31 de março de 2025
 
 ---
+## Etapas
+### Aquisição do sinal do microfone
+- Foi implementado interrupção no botão A da BitDogLab de forma que quando detectada, ocorre a aquisição do sinal do microfone, com as seguintes características:
+    - adc_set_clkdiv(96), o que equivale a uma frequência do ADC de 1 MHz (48MHz/48);
+    - Freqência de amostragem de aproximadamente: 10,4 kSPS (1 MHz/96);
+    - 256 amostras (samples) coletadas por meio de DMA, sendo calculado o valor RMS destas.
+   
 
-<!-- INSIRA O CONTEÚDO DO SEU README AQUI! -->
+### Armazenamento dos dados do ADC
+- Criado buffer para armazenamento de 5000 pontos, que equivalem a aproximadamente 10 seg. de gravação.
+    - Cada um destes pontos é o valor RMS armazenado na etapa de aquisição de sinais;
+    - Cada um destes pontos sofreu ainda uma etapa de processamento antes de serem armazenados.
+
+### Reprodução dos sinais gravados
+- Foi implementado interrupção no botão B da BitDogLab de forma que quando detectada, ocorre a reprodução do sinal do microfone:
+    - A reprodução ocorre por meio da utilização da técnica de PWM.
+
+### Extras
+- Foi implementado ainda feedback visual de ativação com a matriz de leds.
+
+### Vídeo de demonstração
+[Sintetizador BitDoLab](https://youtube.com/shorts/1EEGPP6qZIU?feature=share)
+
+### Referências
+[Insper](https://insper-embarcados.github.io/site/labs-expert/labs-expert-dsp-audio/);   
+[BitDogLab-C](https://github.com/BitDogLab/BitDogLab-C/tree/main/microphone_dma);  
+[pico-examples](https://github.com/raspberrypi/pico-examples/tree/master/adc/microphone_adc);
+[Playing audio files in a Pi Pico without a DAC](https://antirez.com/news/143);  
+[PWM DAC](http://www.openmusiclabs.com/learning/digital/pwm-dac.1.html);
+[Playing with the Pico - 5 parts](https://gregchadwick.co.uk/blog/playing-with-the-pico-pt1/).
 
 ---
 
