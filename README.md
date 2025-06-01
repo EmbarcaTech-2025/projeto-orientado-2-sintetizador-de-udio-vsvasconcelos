@@ -37,10 +37,10 @@ Campinas, 31 de março de 2025
 ### Referências
 [Insper](https://insper-embarcados.github.io/site/labs-expert/labs-expert-dsp-audio/);   
 [BitDogLab-C](https://github.com/BitDogLab/BitDogLab-C/tree/main/microphone_dma);  
-[pico-examples](https://github.com/raspberrypi/pico-examples/tree/master/adc/microphone_adc);
-[Playing audio files in a Pi Pico without a DAC](https://antirez.com/news/143);  
-[PWM DAC](http://www.openmusiclabs.com/learning/digital/pwm-dac.1.html);
-[Playing with the Pico - 5 parts](https://gregchadwick.co.uk/blog/playing-with-the-pico-pt1/).
+[pico-examples](https://github.com/raspberrypi/pico-examples/tree/master/adc/microphone_adc);     
+[Playing audio files in a Pi Pico without a DAC](https://antirez.com/news/143);    
+[PWM DAC](http://www.openmusiclabs.com/learning/digital/pwm-dac.1.html);       
+[Playing with the Pico - 5 parts](https://gregchadwick.co.uk/blog/playing-with-the-pico-pt1/).   
 
 ---
 
